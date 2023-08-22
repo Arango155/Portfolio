@@ -7,6 +7,12 @@
   width: 100%;
 }
 
+main h4 {
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
 nav {
   background-color: white;
   width: 100%;
@@ -29,7 +35,7 @@ a {
 .contact {
   text-align: center;
   font-size: 25px;
-  padding-top: 20rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
 }
 
@@ -118,5 +124,12 @@ main {
 }
 
 .introduction span {
+  color: #999999;
+}
+
+.new {
+  padding-top: 35%;
+
+  text-align: center;
   color: #999999;
 }
