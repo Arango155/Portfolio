@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      .hover-element {
+        position: relative;
+      }
+
+      .tooltip {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .hover-element:hover .tooltip {
+        display: block;
+      }
+    </style>
+
+    <button class="hover-element" type="submit">
+      Submit
+      <span class="tooltip">This is the tooltip text.</span>
+    </button>
+  </body>
+</html>
