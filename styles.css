@@ -1,10 +1,27 @@
 * {
-  font-family: sans-serif;
+  font-family: "Karla", sans-serif;
   cursor: pointer;
 }
 
 .header img {
   width: 100%;
+}
+
+.navigation {
+  width: 100%;
+  padding-top: 1rem;
+  margin-right: 10px;
+  display: inline-block;
+  border: #999999 1px solid;
+  border-top: unset;
+  border-left: unset;
+  border-right: unset;
+}
+
+.navigation a {
+  margin-left: 1rem;
+  margin: 20px;
+  text-align: center;
 }
 
 main h4 {
@@ -23,6 +40,14 @@ nav {
   padding: 0 10px;
 }
 
+a span {
+  font-size: 20px;
+}
+
+a span:hover {
+  background-color: #efefef;
+}
+
 a i:hover {
   background-color: #efefef;
 }
@@ -35,8 +60,8 @@ a {
 .contact {
   text-align: center;
   font-size: 25px;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .contact a {
@@ -45,7 +70,8 @@ a {
 
 .right {
   float: right;
-  margin: 3px;
+  margin-left: 10px;
+  padding-right: 30px;
 }
 
 .left {
@@ -63,8 +89,8 @@ body {
 }
 
 .iconpic img {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
 }
 
@@ -123,8 +149,18 @@ main {
   background-color: #efefef;
 }
 
+strong {
+  font-weight: unset;
+  color: rgb(105, 167, 192);
+}
+
 .introduction span {
   color: #999999;
+}
+
+.introduction h5 {
+  color: #585858;
+  font-weight: bold;
 }
 
 .new {
