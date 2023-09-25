@@ -1,431 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
 
-    <link
-      rel="icon"
-      href="https://static-00.iconduck.com/assets.00/personal-computer-emoji-2048x1707-tzvu6v3l.png"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
 
-  </head>
-  <body>
-    <div id="home"></div>
-    <nav >
-      <div class="left">
-        <a href="">
-          <i class="bi bi-list"></i>
-        </a>
-        <span> 💻 Portfolio </span>
+  <link rel="icon" href="https://static-00.iconduck.com/assets.00/personal-computer-emoji-2048x1707-tzvu6v3l.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josue Arango</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<body id="body">
+  <div id="home"></div>
+  <nav>
+    <div>
+      <div class="menu" id="menu">
+        <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
+        <a href="#home"><i class="bi bi-house"> </i>Home</a>
+        <hr>
+        <a href="#about"><i id="aboutme" class="bi bi-person"> </i>About me</a>
+        <hr>
+        <a href="#skills"><i class="bi bi-tools"> </i>Skills</a>
+        <hr>
+        <a href="#projects"><i class="bi bi-pencil"> </i>Projects</a>
+        <hr>
+        <a href="#contact"><i class="bi bi-at"> </i>Contact me</a>
       </div>
-      <div class="right">
-        <a href="#home"
-          ><span
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            data-bs-title="Home"
-            class="bi bi-house"
-          ></span
-        ></a>
-        <a href="#about" 
-          ><span
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            data-bs-title="About me"
-            class="bi bi-person"
-          ></span
-        ></a>
 
-        <a href="#skills" 
-        ><span
-          data-bs-toggle="tooltip"
-          data-bs-placement="bottom"
-          data-bs-title="Skills"
-          class="bi bi-tools"
-        ></span
-      ></a>
+      <div>
+        <div class="leftm">
+          <a onclick="changeLanguage()" id="translate">
+            <span>
+              <i class="bi bi-translate"></i>
+            </span>
+          </a>
 
-        <a href="#projects"
-          ><span
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            data-bs-title="Projects"
-            class="bi bi-pencil"
-          ></span
-        ></a>
-
-      
-        <a href="#contact" 
-          ><span
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            data-bs-title="Contact"
-            class="bi bi-at"
-          ></span
-        ></a>
-      </div>
-    </nav>
-    <main>
-      <div  class="introduction">
-        <div class="iconpic">
-          <img src="images/me.jpg" alt="Pic of me" />
+          <a onclick="darkMode()" id="dark">
+            <span>
+              <i id="icon" class="bi bi-moon"></i>
+            </span>
+          </a>
         </div>
-<div>
+      </div>
+
+
+      <label class="open" for="">
+        <a onclick="openMenu()"> <i class="bi bi-list"></i>
+      </label>
+      <div class="items">
+        <a href="#home"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home"
+            class="bi bi-house"></span></a>
+        <a href="#about"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="About me"
+            class="bi bi-person"></span></a>
+
+        <a href="#skills"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Skills"
+            class="bi bi-tools"></span></a>
+
+        <a href="#projects"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Projects"
+            class="bi bi-pencil"></span></a>
+
+
+        <a href="#contact"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Contact"
+            class="bi bi-at"></span></a>
+
+        <a onclick="changeLanguage()" id="translate">
+          <span>
+            <i class="bi bi-translate"></i>
+          </span>
+        </a>
+
+        <a onclick="darkMode()" id="dark">
+          <span>
+            <i id="icon" class="bi bi-moon"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+  </nav>
+  <main>
+    <div class="introduction">
+      <div class="iconpic">
+        <img src="images/me.jpg" alt="Pic of me" />
+
+
+
+      </div>
+      <div class="link">
         <span>
           <a href="https://github.com/Arango155" target="_blank">
-            <span
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              data-bs-title="Github"
-              class="bi bi-github"
-            ></span>
+            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github" class="bi bi-github"></span>
           </a>
-          <a
-            href="https://www.linkedin.com/in/josue-arango-289b03198/"
-            target="_blank"
-          >
-            <span
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              data-bs-title="Linkedin"
-              class="bi bi-linkedin"
-            ></span>
+          <a href="https://www.linkedin.com/in/josue-arango-289b03198/" target="_blank">
+            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin"
+              class="bi bi-linkedin"></span>
           </a>
         </span>
-       
+
       </div>
-       
-         <span class="multitext">coder</span>
-       
-        <h1 class="texto">Hey! 👋🏽 I'm <strong>Josue Arango.</strong>
+
+      <!-- <span id="multitext" class="multitext">coder</span> -->
+
+      <div class="int">
+        <h1 class="texto" id="hi">Hello! 👋🏽 I'm </h1>
+
+        <h1 class="name"><strong>Josue Arango.</strong>
         </h1>
-    
-      
-        <p
-          >I'm an embedded systems student located in Guatemala looking for new opportunities around the world 📍
-        </p>
       </div>
 
-  
-      <div class="about" >
 
-        <div id="about"></div>
-        <br>
-       <h4 class="title">ABOUT ME</h4>
+      <p id="intro">I'm an engineer systems student located in Guatemala looking for new opportunities around the world
+        📍
+      </p>
+    </div>
 
 
-      <div  class="section">
+    <div class="about">
+
+
+      <br>
+      <br>
+      <h1 class="title" id="me">ABOUT ME
+      </h1>
+
+
+
+      <div class="section">
         <div class="text">
-          <h3>Embedded systems student</h3>
-          <p>With a natural curiosity and knack for problem solving, I am not only learning the ins and outs of systems 
-            engineering, but also actively contributing my experience to the field of electronic and mechanical technology. 📶</p>
-            <a href="Resume.docx.pdf" download="computer" type="submit" class="btn btn-primary button" target="_blank">
-              DOWNLOAD RESUME <span class="bi bi-download"></span>
-             </a></div>
-            <img src="https://raw.githubusercontent.com/Serhioromano/vscode-st/master/images/md-highlight.png"  alt="">
-  
-             </div>
-   
-    
-    
-      
+          <h3 id="title">Systems engineering student</h3>
+
+          <p id="about">With a natural curiosity and knack for problem solving, I am not only learning the
+            ins and
+            outs
+            of
+            systems
+            engineering, but also actively contributing my experience to the field of electronic and mechanical
+            technology. 📶
+          </p>
+
+          <a href="Resume.docx.pdf" download="computer" type="submit" class="btn btn-primary button" target="_blank">
+            DOWNLOAD RESUME <span class="bi bi-download"></span>
+          </a>
+        </div>
+        <img src="https://raw.githubusercontent.com/Serhioromano/vscode-st/master/images/md-highlight.png" alt="">
+
       </div>
 
-      
-      
 
-      <div class="about">
-          
-  <div id="skills"></div>
-  <br>
-       <h4 class="text-center title" >SKILLS</h4>
-       
-       <div class="margin" >
-       <div class="card" >
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png" alt="">
-        
-       </div>
 
-       <div class="card" >
-        <img src="https://cdn.cdnlogo.com/logos/p/60/plc-systems.svg" alt="">
-        
-       </div>
-       <div class="card" >
-        <img src="https://pnghq.com/wp-content/uploads/2023/02/html-css-logo-svg-png-4699.png" alt="">
+
+    </div>
+
+
+
+
+    <div class="about">
+
+      <div id="skills"></div>
+      <br>
+
+
+      <br>
+      <div class="links">
+
+
+        <form>
+          <button id="button" onclick="showCodeSkills()" class="button2 btn btn-primary">Coding skills</button>
+        </form>
+
+        <br>
+
+        <form>
+          <button id="button2" onclick="showSoftSkills()" class=" button2 btn btn-light">Soft skills</button>
+        </form>
+
+
+      </div>
+
+
+      <div id="codingskills" class="margin">
+        <div class="card">
+
+          <i class="bi bi-pencil"></i>
+          <span>Web development</span>
+          <p>"Freelance Full Stack Developer: HTML, CSS, JavaScript, Expertise in Django & Laravel."
+          </p>
+        </div>
+
+        <div class="card">
+
+          <i class="bi bi-database"></i>
+          <span>Database Analisis</span>
+          <p>"As a freelancer, I excel in database analysis and normalization using Oracle and MySQL."</p>
+        </div>
+
+        <div class="card">
+
+          <i class="bi bi-phone"></i>
+          <span>Mobile development</span>
+          <p>"Crafted Native Applications with Flutter Framework."</p>
+        </div>
+
+        <div class="card">
+
+          <i class="bi bi-tools"></i>
+          <span>Industrial Automation</span>
+          <p>
+            "Empowering Tomorrow's Automation Today: Experienced in Industrial Automation Programming with PLCs."
+          </p>
+        </div>
+
+
+        <div class="card">
+
+          <i class="bi bi-robot"></i>
+          <span>Machine learning</span>
+          <p>"Utilized Pandas and NumPy in Python for Machine Learning and API Projects."</p>
+        </div>
+
+        <div class="card">
+
+          <i class="bi bi-cpu"></i>
+          <span>Embedded Systems</span>
+          <p>"In my electromechanical career, I've programmed microcontrollers in C and Arduino."</p>
+        </div>
+
+
+      </div>
+
+      <div id="softskills" class="margin">
+        <div class="card">
+          <i class="bi bi-chat"></i>
+          <span>Communication</span>
+          <p>
+            Someone who communicates ideas and has acquired proficiency in English , enabling
+            me to express myself as fluently as in my native language.</p>
+        </div>
+
+        <div class="card">
+          <i class="bi bi-lightbulb"></i>
+          <span>Problem solving</span>
+          <p>"Bringing Practical Solutions."</p>
+        </div>
+
+        <div class="card">
+          <i class="bi bi-puzzle"></i>
+          <span>Creativity</span>
+          <p>Continually seeking innovation in every project.</p>
+        </div>
+
+
+        <div class="card">
+          <i class="bi bi-book"></i>
+          <span>Continous Learning</span>
+          <p>
+            I constantly strive to refresh and expand my knowledge.</p>
+        </div>
+
+
+        <div class="card">
+          <i class="bi bi-people"></i>
+          <span>Adaptation</span>
+          <p>
+            I embrace novel experiences and diverse environments, fully prepared to excel in my responsibilities.
+          </p>
+        </div>
+
+
+        <div class="card">
+          <i class="bi bi-clock"></i>
+          <span>Stress managment</span>
+          <p>Capable of thriving in high-pressure work environments.
+          </p>
+        </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <div class="projects">
+      <div id="projects"></div>
+      <br>
+      <h4 class="title">Projects</h3>
+        <br>
+
+        <div class="links">
+
+          <form>
+            <button id="button3" onclick="showWeb()" class="button2 btn btn-primary">Full stack</button>
+          </form>
+
+          <br>
+
+          <form>
+            <button id="button4" onclick="showMobile()" class=" button2 btn btn-light">Mobile</button>
+          </form>
+
+          <form>
+            <button id="button4" onclick="showDataAnalysis()" class=" button2 btn btn-light">Data analysis</button>
+          </form>
+
+          <form>
+            <button id="button4" onclick="showEmbedded()" class=" button2 btn btn-light">Embedded Systems</button>
+          </form>
+
+          <form>
+            <button id="button4" onclick="showIndustrial()" class=" button2 btn btn-light">Industrial
+              Automation</button>
+          </form>
+
 
         </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/800px-Python_logo_01.svg.png" alt="">
-  
-          </div>
-          <div class="card" >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/738px-Laravel.svg.png" alt="">
-    
-            </div>
-            <div class="card">
-              <img src="https://miro.medium.com/v2/resize:fit:1001/1*vPezx00A1u0WAfS8e8wBXQ.png" alt="">
-      
-              </div>
-              <div class="card">
-                <img src="https://seeklogo.com/images/A/arduino-logo-BC7CBC1DAA-seeklogo.com.png" alt="">
-        
-                </div>
-                <div class="card">
-                  <img src="https://www.svgrepo.com/download/184143/java.svg" alt="">
-          
-                  </div>
-          <div class="card">
-            <img src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/G.png" alt="">
-          </div>
-          <div class="card">
-            <img src="https://miro.medium.com/v2/resize:fit:773/1*GjUEI7jKlkCTB5cgfW1Feg.png" alt="">
-          </div>
 
-          <div class="card">
-            <img src="https://icon-library.com/images/no-sql-icon/no-sql-icon-16.jpg" alt="">
-          </div>
-
-          <div class="card">
-            <img src="https://icon-library.com/images/django-icon/django-icon-0.jpg" alt="">
-          </div>
-          
-       </div>
-     
-      
-      </div>
-
-
-  
-   
-
-      <div  class="projects" >
-        <div id="projects"></div>
-        <br>
-        <h4 class="title">PORTFOLIO</h4>
-       
         <div class="section">
           <div class="textl">
             <h4>Library CRUD 📖</h4>
-            <p>Library CRUD is a platform where youn can look at the books in the library from Puerto Barrios and the admin can modify the status in existence or not</p>
-          <div  >
-            <h4>Laravel</h4>
-            <h4>Bootstrap</h4>
-          </div>
+            <p>Library CRUD is a platform where youn can look at the books in the library from Puerto Barrios and
+              the
+              admin can modify the status in existence or not</p>
+            <div>
+              <h4>Laravel</h4>
+              <h4>Bootstrap</h4>
+            </div>
             <span>
               <a href="https://github.com/Arango155/BibliotecaMunicipal.git" target="_blank">
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Github"
-                  class="bi bi-github"
-                ></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
               </a>
               <a href="" target="_blank">
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Link"
-                  class="bi bi-link"
-                ></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Link" class="bi bi-link"></span>
               </a>
 
             </span>
           </div>
-          <img src="https://scontent.fgua1-3.fna.fbcdn.net/v/t1.6435-9/84037494_2639704949439498_5554082068863909888_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=973b4a&_nc_ohc=ZpssOLUANiUAX-3IutQ&_nc_ht=scontent.fgua1-3.fna&oh=00_AfCNvYGghrwEFZKUdoteIM-LP96u_SjmUk8_dtp1M77kAg&oe=65147FD0" alt="">
+          <img
+            src="https://scontent.fgua1-3.fna.fbcdn.net/v/t1.6435-9/84037494_2639704949439498_5554082068863909888_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=973b4a&_nc_ohc=ZpssOLUANiUAX-3IutQ&_nc_ht=scontent.fgua1-3.fna&oh=00_AfCNvYGghrwEFZKUdoteIM-LP96u_SjmUk8_dtp1M77kAg&oe=65147FD0"
+            alt="">
         </div>
 
-        <div  class="section">
+        <div class="section">
           <img src="https://i.pinimg.com/736x/76/c8/c6/76c8c6ca36d1e58d946348c75296c124.jpg" alt="">
-       
+
           <div class="textr">
             <h4>Photographic 📷</h4>
-            <p>Photographic is an app where you can contact with your favorite artist and view the last songs from them in a responsive web app</p>
-          <a>
-           <a href=""><h4>Django</h4></a> 
-           <a><h4> Bootstrap</h4></a>
-
-            <span>
-              <a href="https://github.com/Arango155" target="_blank">
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Github"
-                  class="bi bi-github"
-                ></span>
+            <p>Photographic is an app where you can contact with your favorite artist and view the last songs from
+              them
+              in
+              a responsive web app</p>
+            <a>
+              <a href="">
+                <h4>Django</h4>
               </a>
-              <a href="" target="_blank">
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Link"
-                  class="bi bi-link"
-                ></span>
+              <a>
+                <h4> Bootstrap</h4>
               </a>
 
-            </span>
-          </a>
+              <span>
+                <a href="https://github.com/Arango155" target="_blank">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                    class="bi bi-github"></span>
+                </a>
+                <a href="" target="_blank">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Link" class="bi bi-link"></span>
+                </a>
+
+              </span>
+            </a>
           </div>
-          
+
         </div>
 
-        
 
+
+
+    </div>
+
+
+
+
+    <div class="contact">
+
+
+      <h4 class="title">CONTACT</h4>
+
+
+      <h3 class="ptitle">
+        Lets keep in touch 🖐🏽
+      </h3>
+      <div class="info">
+
+
+
+        <div class="info_item" id="contact">
+          <div class="">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+
+          <span> Call me</span>
+          <br>
+          <a class="a_item">+1-502-5440-3980</a>
+
+
+        </div>
+
+        <div class="info_item">
+          <div class="">
+            <i class="bi bi-map-fill"></i>
+          </div>
+
+          <span> Location</span>
+          <br>
+          <a class="a_item">Izabal,Guatemala</a>
+
+        </div>
+
+
+
+        <div class="info_item">
+          <div class="">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+
+          <span> Mail</span>
+          <br><a href="mailto:josarango24@gmail.com" class="a_item">josarango24@gmail.com</a>
+
+
+        </div>
+
+
+        <div class="media">
+          <a href="https://wa.me/54403980" target="_blank">
+            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Whatsapp"
+              class="bi bi-whatsapp"></span>
+          </a>
+
+          <a href="https://www.youtube.com/channel/UCI4nEkfMPVLZHZ8_6m9XOcQ" target="_blank">
+            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Youtube" class="bi bi-youtube"></span>
+          </a>
+          <a href="https://www.instagram.com/jos.arango/" target="_blank">
+            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"
+              class="bi bi-instagram"></span>
+          </a>
+
+
+        </div>
 
       </div>
 
-          
-        
 
-        <div class="contact">
-          
-          
-            <h4 class="title">CONTACT</h4>
-            
-      
-            <h3 class="ptitle">
-              Lets keep in touch 🖐🏽
-            </h3>
-         <div class="info">
-
-         
-
-          <div class="info_item"  id="contact">
-            <div class="">
-              <i class="bi bi-telephone-fill"></i>
-            </div>
-      
-              <span> Call me</span>
-              <br>
-              <a class="a_item">+1-502-5440-3980</a>
-  
-           
-          </div>
-
-          <div  class="info_item">
-            <div class="">
-              <i class="bi bi-map-fill"></i>
-            </div>
-            
-              <span>  Location</span>
-              <br>
-              <a class="a_item">Izabal,Guatemala</a>
-           
-          </div>
-
-          
-
-          <div class="info_item">
-            <div class="">
-              <i class="bi bi-envelope-fill"></i>
-            </div>
-           
-              <span> Mail</span> 
-              <br><a href="mailto:josarango24@gmail.com" class="a_item">josarango24@gmail.com</a>
-             
-
-            </div>
-          
-
-            <div class="media">
-              <a href="https://wa.me/54403980" target="_blank">
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Whatsapp"
-                  class="bi bi-whatsapp"
-                ></span>
-              </a>
-          
-              <a
-                href="https://www.youtube.com/channel/UCI4nEkfMPVLZHZ8_6m9XOcQ"
-                target="_blank"
-              >
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Youtube"
-                  class="bi bi-youtube"
-                ></span>
-              </a>
-              <a href="https://www.instagram.com/jos.arango/" target="_blank">
-                <span
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Instagram"
-                  class="bi bi-instagram"
-                ></span>
-              </a>
-            
-              
-            </div>
-
-          </div>
-          
-       
-          <!-- <div id="contact" class="send">
-            <form onsubmit="sendEmail(); reset(); return false;">
-          
-            <div class="input">
-              <input type="text" id="name"  placeholder="Your Name"  value="" required>
-              </div>
-              <div class="input"><input type="email" id="email" placeholder="Your Email"  value="" required>
-                </div>
-              <div class="input">
-                <input id="subject" type="text" placeholder="Your Subject"  value="" required>
-                </div>
-              
-              <div class="input">
-              <textarea id="message" rows="5" cols="23" placeholder="Your Message" required></textarea>
-            </div>
-            
-              <div class="input">
-              <button onclick=""  type="submit" class="btn btn-primary button" target="_blank">
-               SEND MESSAGE <span class="bi bi-send"></span>
-               </button>
-              </div>
-               </form>
-              </div> -->
-    
-        </div>
-    </main>
-
-  
-
-   <footer></footer>
-    
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-   
-
-<script src="javascript.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-<script>
+    </div>
+  </main>
 
 
-var typed = new Typed('.multitext', {
+
+  <footer></footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+
+  <script src="javascript.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+
+    var typed = new Typed(document.getElementById('multitext'), {
       strings: ['Full stack', 'Data science', 'Industrial automation'],
       loop: true,
       typeSpeed: 70,
     });
-</script>
-  </body>
+
+
+  </script>
+
+  <script src="javascript.js"></script>
+
+
+</body>
+
 </html>
