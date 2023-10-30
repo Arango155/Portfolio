@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/personal-computer-emoji-2048x1707-tzvu6v3l.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Josue Arango</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body id="body">
+
+
+    <div class="" id="overview"></div>
+    <nav>
+        <div class="menu" id="menu">
+            <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
+            <a href="index.html"><i class="bi bi-house"> </i>Home</a>
+            <hr>
+            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <hr>
+            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <hr>
+            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+        </div>
+        <label class="open" for="">
+            <a onclick="openMenu()"> <i class="bi bi-list"></i>
+            </a></label>
+        <div class="elements">
+            <a href="index.html">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#goals">Goals</a>
+            <a href="#specifications">Specifications</a>
+        </div>
+    </nav>
+    <!-- Project Details Section -->
+    <main>
+        <div class="container">
+            <section id="project-details">
+                <h1>Reversing Single Phase Motor</h1>
+                <br>
+                <span>
+                    Throughout my career, I've observed that the conventional method of reversing a single-phase motor
+                    involves the manual reconfiguration of wiring connections. Recognizing the need for greater
+                    efficiency
+                    and automation, I embarked on a project to address this issue. I developed a schematic module that
+                    incorporates a user-friendly button interface, enabling seamless motor direction reversal, akin to
+                    the
+                    convenience found in three-phase motors. Subsequently, I designed and implemented a PLC
+                    (Programmable
+                    Logic Controller) program, employing structured text programming techniques. This program, coupled
+                    with
+                    a user-friendly interface, serves as an innovative solution to streamline and automate industrial
+                    processes reliant on single-phase motors. My project not only simplifies motor reversal but also
+                    enhances operational efficiency, illustrating my commitment to advancing automation within
+                    industrial
+                    settings.
+                </span>
+                <p id="goals">
+                    9/29/2023
+                </p>
+
+
+                <h3 class="title">Goals</h4>
+                    <br>
+
+                    <h5 id="black">Simplify motor reversal:</h4>
+
+                        <span>
+                            The primary goal is to simplify the process of reversing a single-phase
+                            motor.
+
+
+                            This simplification eliminates the need for manual rewiring and streamlines the operation
+                            through a
+                            user-friendly interface.
+                        </span>
+
+                        <br>
+                        <br>
+                        <h5 id="black">Automation:</h4>
+
+                            <span>
+                                The project seeks to automate the process of reversing single-phase motors. Automation
+                                reduces the risk of human error and ensures consistent and reliable motor direction
+                                changes,
+                                ultimately
+                                improving process reliability.
+                            </span>
+
+
+
+                            <div class="" id="specifications"></div>
+
+                            <h3 class="title">Schematic</h3>
+
+                            <img src="images/schematic.jpg" width="30%" alt="">
+
+                            <h3 class="title">PLC Ladder</h3>
+
+                            <img src="images/plc.jpg" alt="">
+
+                            <h3 class="title">Code example in java</h3>
+
+                            <div class="containercode">
+                                <div class="code-wrape">
+                                    <pre>
+                                        <p id="gray">Java</p>
+                                    <code id="code" class="language-java">
+
+                                    
+
+                                      
+                                        import java.util.Scanner;
+
+                                        public class Main {
+                                        
+                                            public static void main (String[] args){
+                                        
+                                                Scanner scanner = new Scanner(System.in);
+                                        
+                                                System.out.println("Motor control");
+                                        
+                                                //I define output variables for my coils
+                                        
+                                                Boolean Q1=false;
+                                                Boolean Q2=false;
+                                        
+                                                //I define my NO auxiliar contactors where i have 2 for KM1 and 2 for KM2
+                                        
+                                                Boolean NO1KM1=false;
+                                                Boolean KO2KM1=false;
+                                                Boolean NO1KM2=false;
+                                                Boolean KO2KM2=false;
+                                        
+                                        
+                                                while(true) {
+                                                    System.out.print("Enter a command (forward, reverse, stop,exit): ");
+                                                    String option = scanner.next().toLowerCase();
+                                        
+                                                    if(option.equals("forward")){
+                                                        if(!Q1&&!Q2){
+                                                            System.out.println("Motor started moving forward");
+                                                            //For move forward I define NO1KM2 and NO2KM2 as true, 
+                                                            // and i set my KM1 as false this mean my output will be 
+                                                            //In my first point T1-T5
+                                                            //In my start point T1-T3-T2-T8
+                                        
+                                                            NO1KM1=true;
+                                                            KO2KM1=true;
+                                                            NO1KM2=false;
+                                                            KO2KM2=false;
+                                                            Q1=true;
+                                                        } else if (!Q1&&Q2){
+                                                            System.out.println("You cant start the motor, its alredy moving reverse" +
+                                                                    " you have to stop it for move it reverse");
+                                                        } else {
+                                                            System.out.println("Motor is alredy running forward");
+                                                        }
+                                                    } else if(option.equals("reverse")){
+                                        
+                                                        if(!Q1&&!Q2){
+                                                            //For run reverse I define NO1KM1 and NO2KM1 as true and set KM2 as false
+                                                            // this mean my output will be 
+                                                            //In my first point T1-T8
+                                                            //In my start point T1-T3-T2-T5
+                                        
+                                                            NO1KM1=false;
+                                                            KO2KM1=false;
+                                                            NO1KM2=true;
+                                                            KO2KM2=true;
+                                                            System.out.println("Motor started moving reverse");
+                                                            Q2=true;
+                                                        } else if (Q1&&!Q2){
+                                                            System.out.println("You cant start the motor, its alredy moving forward" +
+                                                                    " you have to stop it for move it reverse");
+                                                        } else {
+                                                            System.out.println("Motor is alredy running reverse");
+                                                        }
+                                                    } else if (option.equals("stop")){
+                                                        if(Q1||Q2){
+                                                            System.out.println("Motor is stop");
+                                                            Q1=false;
+                                                            Q2=false;
+                                                        } else {
+                                                            System.out.println("Motor is alredy stop");
+                                                        }
+                                                    } else if (option.equals("exit")){
+                                                        break;
+                                                    }
+                                        
+                                                }
+                                        
+                                            }
+                                        
+                                        }
+                                                                            </code>
+                                 </pre>
+                                </div>
+                            </div>
+
+                            <h3 class="title">Wire</h3>
+
+                            <img src="images/contactor.jpg" width="30%" alt="">
+                            <br>
+                            <br>
+
+                            <div>
+                                <h3 class="title">Demo</h3>
+
+                                <video src="Videos/demomotor.mp4" controls width="640" height="360"></video>
+                            </div>
+
+
+                            <div id="project">
+
+                                <h3 class="title">Project</h3>
+
+                                <video src="Videos/motor1.mp4" controls width="640" height="360"></video>
+
+
+                            </div>
+
+            </section>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="javascript.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

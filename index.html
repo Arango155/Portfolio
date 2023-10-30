@@ -23,7 +23,7 @@
         <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
         <a href="#home"><i class="bi bi-house"> </i>Home</a>
         <hr>
-        <a href="#about"><i id="aboutme" class="bi bi-person"> </i>About me</a>
+        <a href="#abt"><i id="aboutme" class="bi bi-person"> </i>About me</a>
         <hr>
         <a href="#skills"><i class="bi bi-tools"> </i>Skills</a>
         <hr>
@@ -32,21 +32,7 @@
         <a href="#contact"><i class="bi bi-at"> </i>Contact me</a>
       </div>
 
-      <div>
-        <div class="leftm">
-          <a onclick="changeLanguage()" id="translate">
-            <span>
-              <i class="bi bi-translate"></i>
-            </span>
-          </a>
 
-          <a onclick="darkMode()" id="dark">
-            <span>
-              <i id="icon" class="bi bi-moon"></i>
-            </span>
-          </a>
-        </div>
-      </div>
 
 
       <label class="open" for="">
@@ -55,7 +41,7 @@
       <div class="items">
         <a href="#home"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home"
             class="bi bi-house"></span></a>
-        <a href="#about"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="About me"
+        <a href="#abt"><span data-bs-toggle="tooltip" data-bs-placement="bottom" id="met" data-bs-title="About me"
             class="bi bi-person"></span></a>
 
         <a href="#skills"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Skills"
@@ -68,23 +54,72 @@
         <a href="#contact"><span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Contact"
             class="bi bi-at"></span></a>
 
-        <a onclick="changeLanguage()" id="translate">
-          <span>
-            <i class="bi bi-translate"></i>
-          </span>
-        </a>
 
         <a onclick="darkMode()" id="dark">
           <span>
-            <i id="icon" class="bi bi-moon"></i>
+
+            <i class="bi bi-moon" id="icon"></i>
           </span>
         </a>
+
+
+        <div class="hover-div">
+
+          <i class="bi bi-translate"></i>
+
+
+          <div id="submenu" class="hidden-div">
+
+            <img onclick="changeLanguage(0)"
+              src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png" alt=""
+              class="flag">
+            <img onclick="changeLanguage(1)" src="https://cdn.countryflags.com/thumbs/guatemala/flag-800.png" alt=""
+              class="flag">
+
+            <img onclick="changeLanguage(2)"
+              src="https://www.countryflags.com/wp-content/uploads/france-flag-png-xl.png" alt="" class="flag">
+
+
+
+          </div>
+        </div>
+
+
       </div>
 
     </div>
+    <div class="leftm">
+      <div class="hover-div">
 
+        <i class="bi bi-translate"></i>
+
+
+        <div class="hidden-div">
+
+          <img onclick="changeLanguage(0)"
+            src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png" alt=""
+            class="flag">
+          <img onclick="changeLanguage(1)" src="https://cdn.countryflags.com/thumbs/guatemala/flag-800.png" alt=""
+            class="flag">
+
+          <img onclick="changeLanguage(2)" src="https://www.countryflags.com/wp-content/uploads/france-flag-png-xl.png"
+            alt="" class="flag">
+
+
+
+        </div>
+      </div>
+
+
+      <a onclick="darkMode()" id="dark">
+        <span>
+          <i class="bi bi-moon" id="icon2"></i>
+        </span>
+      </a>
+    </div>
   </nav>
-  <main>
+
+  <main onclick="closeMenu()">
     <div class="introduction">
       <div class="iconpic">
         <img src="images/me.jpg" alt="Pic of me" />
@@ -105,7 +140,7 @@
 
       </div>
 
-      <!-- <span id="multitext" class="multitext">coder</span> -->
+
 
       <div class="int">
         <h1 class="texto" id="hi">Hello! 👋🏽 I'm </h1>
@@ -123,7 +158,7 @@
 
     <div class="about">
 
-
+      <div id="abt"></div>
       <br>
       <br>
       <h1 class="title" id="me">ABOUT ME
@@ -144,8 +179,12 @@
             technology. 📶
           </p>
 
-          <a href="Resume.docx.pdf" download="computer" type="submit" class="btn btn-primary button" target="_blank">
-            DOWNLOAD RESUME <span class="bi bi-download"></span>
+
+          <a id="download" href="Resume.docx.pdf" download="Josue_Arango" type="submit"
+            class="btn btn-primary button bi bi-download" target=" _blank">
+            DOWNLOAD RESUME
+
+            </span></span>
           </a>
         </div>
         <img src="https://raw.githubusercontent.com/Serhioromano/vscode-st/master/images/md-highlight.png" alt="">
@@ -169,16 +208,14 @@
       <br>
       <div class="links">
 
+        <button id="button" onclick="showCodeSkills()" class="button2 btn btn-primary">Coding skills</button>
 
-        <form>
-          <button id="button" onclick="showCodeSkills()" class="button2 btn btn-primary">Coding skills</button>
-        </form>
 
         <br>
 
-        <form>
-          <button id="button2" onclick="showSoftSkills()" class=" button2 btn btn-light">Soft skills</button>
-        </form>
+
+        <button id="button2" onclick="showSoftSkills()" class=" button2 btn btn-light">Soft skills</button>
+
 
 
       </div>
@@ -266,9 +303,9 @@
 
         <div class="card">
           <i class="bi bi-people"></i>
-          <span>Adaptation</span>
+          <span>Teamwork</span>
           <p>
-            I embrace novel experiences and diverse environments, fully prepared to excel in my responsibilities.
+            I collaborate openly, and foster a harmonious and productive environment.
           </p>
         </div>
 
@@ -292,42 +329,110 @@
 
 
 
+    <div class="about"></div>
 
-    <div class="projects">
-      <div id="projects"></div>
+    <h4 class="title" id="projects">Projects</h3>
       <br>
-      <h4 class="title">Projects</h3>
+
+
+
+      <div class="links">
+
+
+        <button id="button3" onclick="showWeb()" class="button3 btn btn-primary">Programming</button>
+
+
         <br>
 
-        <div class="links">
+        <!-- 
+        <button id="button4" onclick="showMobile()" class=" button4 btn btn-light">Mobile</button>
+        <br>
+        <button id="button5" onclick="showDataAnalysis()" class=" button5 btn btn-light">Data analysis</button>
+        <br>
+        <button id="button6" onclick="showEmbedded()" class=" button6 btn btn-light">Embedded Systems</button>
+        <br> -->
+        <button id="button7" onclick="showIndustrial()" class=" button7 btn btn-light">Electronics</button>
 
-          <form>
-            <button id="button3" onclick="showWeb()" class="button2 btn btn-primary">Full stack</button>
-          </form>
 
-          <br>
+      </div>
 
-          <form>
-            <button id="button4" onclick="showMobile()" class=" button2 btn btn-light">Mobile</button>
-          </form>
 
-          <form>
-            <button id="button4" onclick="showDataAnalysis()" class=" button2 btn btn-light">Data analysis</button>
-          </form>
 
-          <form>
-            <button id="button4" onclick="showEmbedded()" class=" button2 btn btn-light">Embedded Systems</button>
-          </form>
 
-          <form>
-            <button id="button4" onclick="showIndustrial()" class=" button2 btn btn-light">Industrial
-              Automation</button>
-          </form>
 
+      <div id="web">
+
+        <div class="section">
+          <img
+            src="https://j7i7x4q6.rocketcdn.me/wp-content/uploads/2022/03/Online-Learning-App-Female-Using-Smartphone-Application-For-Studying-Foreign-Languages-Cropped-min-1024x633.jpg"
+            width="70%" height="auto">
+
+          <div class="textr">
+            <h4> Mary 📞</h4>
+            <p>
+              Mary is your gateway to mastering a new language. Within this app, you can engage in real-time
+              conversations, and receive responses in your chosen language that mimic native speakers. It's like having
+              a conversation with a fluent speaker, all while building your vocabulary.
+            </p>
+            <div>
+              <h4>Python</h4>
+
+            </div>
+            <span>
+              <a href="" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
+              </a>
+              <a href="" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="error.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
+              </a>
+
+            </span>
+          </div>
 
         </div>
 
+
         <div class="section">
+          <div class="textl">
+            <h4> ElectraFind 🎛️</h4>
+            <p>
+              ElectraFind is a cutting-edge mobile app designed for electronics enthusiasts, hobbyists, and makers. It
+              simplifies and enhances the electronics project creation process, making it easier than ever to explore,
+              learn, and build with your electronic components.
+            </p>
+            <div>
+              <h4>Python</h4>
+
+            </div>
+            <span>
+              <a href="" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
+              </a>
+              <a href="" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="error.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
+              </a>
+
+            </span>
+          </div>
+          <img src="https://cdn.findernet.com/app/uploads/APP_FINDER_YOU_B-1.png" width="70%" height="auto">
+        </div>
+
+
+
+        <!-- <div class="section">
+          <img src="https://i.pinimg.com/736x/76/c8/c6/76c8c6ca36d1e58d946348c75296c124.jpg" alt="">
           <div class="textl">
             <h4>Library CRUD 📖</h4>
             <p>Library CRUD is a platform where youn can look at the books in the library from Puerto Barrios and
@@ -351,124 +456,255 @@
           <img
             src="https://scontent.fgua1-3.fna.fbcdn.net/v/t1.6435-9/84037494_2639704949439498_5554082068863909888_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=973b4a&_nc_ohc=ZpssOLUANiUAX-3IutQ&_nc_ht=scontent.fgua1-3.fna&oh=00_AfCNvYGghrwEFZKUdoteIM-LP96u_SjmUk8_dtp1M77kAg&oe=65147FD0"
             alt="">
+        </div> -->
+
+
+
+      </div>
+
+      <div id="industrial">
+        <div class="section">
+          <div class="textl">
+            <h4> Intelligent Fruit Ripening Automation 🍎 </h4>
+            <p>
+              This project employs sophisticated algorithms to maintain temperature optimizing the ripening process for
+              specific varieties. This ensures that fruits reach their desired ripeness level consistently through a
+              closed loop system
+              programmed in fbd with c.pco controller.
+            </p>
+            <div>
+              <h4>FBD</h4>
+              <h4>C.suite</h4>
+            </div>
+            <span>
+              <a href="https://github.com/Arango155/Forward_Reversingmotor.git" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
+              </a>
+              <a href="" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="fruitprocess.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
+              </a>
+
+
+            </span>
+          </div>
+          <img src="https://softripe.com/fileadmin/content/slider/technologie/Slider_Technologie_1.png" width="70%"
+            height="auto">
         </div>
 
         <div class="section">
-          <img src="https://i.pinimg.com/736x/76/c8/c6/76c8c6ca36d1e58d946348c75296c124.jpg" alt="">
-
+          <img src="images/clock.jpg" width="100%" height="auto">
           <div class="textr">
-            <h4>Photographic 📷</h4>
-            <p>Photographic is an app where you can contact with your favorite artist and view the last songs from
-              them
-              in
-              a responsive web app</p>
-            <a>
-              <a href="">
-                <h4>Django</h4>
+            <h4>Design and Construction of a 24 Hour Digital Clock</h4>
+            <p>The project "Design and Construction of a 24-Hour Digital Clock" aims to create a digital clock that
+              displays time in 24-hour format, using a combination of decoders, flip-flops, a 555 timer and counters.
+            </p>
+            <div>
+              <h4>Multisim</h4>
+            </div>
+            <span>
+              <a href="https://github.com/Arango155/Forward_Reversingmotor.git" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
               </a>
-              <a>
-                <h4> Bootstrap</h4>
+              <a href="digitalclock.ms14" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="digitalclock.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
               </a>
 
-              <span>
-                <a href="https://github.com/Arango155" target="_blank">
-                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
-                    class="bi bi-github"></span>
-                </a>
-                <a href="" target="_blank">
-                  <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Link" class="bi bi-link"></span>
-                </a>
 
-              </span>
-            </a>
+            </span>
           </div>
 
         </div>
 
 
 
+        <div class="section">
+          <div class="textl">
+            <h4>A Forward-Reverse Single-Phase Motor Control System Through GUI</h4>
+            <p>This cutting-edge solution empowers you to effortlessly manage the operation of single-phase electric
+              motors, allowing for both forward and reverse directions with the convenience of a digital interface.</p>
+            <div>
+              <h4>Python</h4>
+              <h4>Java</h4>
+              <h4>Cade_Simu</h4>
+            </div>
+            <span>
+              <a href="https://github.com/Arango155/Forward_Reversingmotor.git" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
+              </a>
+              <a href="ControlMotor.exe" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="singlephase.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
+              </a>
 
-    </div>
+
+            </span>
+          </div>
+          <img src="images/contactor.jpg" width="100%" height="auto">
+        </div>
+
+        <div class="section">
+          <img src="https://m.media-amazon.com/images/I/41mEIw4KS9L.jpg" width="100%" height="auto">
+          <div class="textr">
+            <h4>Optimal Precision Motion Sequencing for NEMA 23 with PLC 27-200</h4>
+            <p>A precise and versatile motor control project using a NEMA 23 stepper motor and PLC 27-200 with Ladder
+              programming, offering
+              efficient, safe, and scalable motion sequencing capabilities for a wide range of applications."</p>
+            <div>
+              <h4>Ladder</h4>
+              <h4>Cade_Simu</h4>
+            </div>
+            <span>
+              <a href="https://github.com/Arango155/Forward_Reversingmotor.git" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
+              </a>
+              <a href="stepmotor.cad" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="stepmotor.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
+              </a>
 
 
-
-
-    <div class="contact">
-
-
-      <h4 class="title">CONTACT</h4>
-
-
-      <h3 class="ptitle">
-        Lets keep in touch 🖐🏽
-      </h3>
-      <div class="info">
-
-
-
-        <div class="info_item" id="contact">
-          <div class="">
-            <i class="bi bi-telephone-fill"></i>
+            </span>
           </div>
 
-          <span> Call me</span>
-          <br>
-          <a class="a_item">+1-502-5440-3980</a>
-
-
         </div>
 
-        <div class="info_item">
-          <div class="">
-            <i class="bi bi-map-fill"></i>
+        <div class="section">
+          <div class="textl">
+            <h4>Regulated Multi-Output Power Supply from 120 V AC to 5V, 12V and 0-12V DC</h4>
+            <p>This project consists of a power supply that converts 120 V AC into three regulated outputs: 5V DC, 12V
+              DC and an adjustable 0-12V DC output. It is a versatile and precise solution for various applications
+            </p>
+            <div>
+
+              <h4>Multisim</h4>
+
+            </div>
+            <span>
+              <a href="https://github.com/Arango155/Forward_Reversingmotor.git" target="_blank">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Github"
+                  class="bi bi-github"></span>
+              </a>
+              <a href="" download>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"
+                  class="bi bi-download"></span>
+              </a>
+              <a href="error.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Documentation"
+                  class="bi bi-file-text-fill"></span>
+              </a>
+
+
+            </span>
           </div>
-
-          <span> Location</span>
-          <br>
-          <a class="a_item">Izabal,Guatemala</a>
-
+          <img src="images/PowerSupply.jpg" width="100%" height="auto">
         </div>
 
 
 
-        <div class="info_item">
-          <div class="">
-            <i class="bi bi-envelope-fill"></i>
-          </div>
 
-          <span> Mail</span>
-          <br><a href="mailto:josarango24@gmail.com" class="a_item">josarango24@gmail.com</a>
-
-
-        </div>
-
-
-        <div class="media">
-          <a href="https://wa.me/54403980" target="_blank">
-            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Whatsapp"
-              class="bi bi-whatsapp"></span>
-          </a>
-
-          <a href="https://www.youtube.com/channel/UCI4nEkfMPVLZHZ8_6m9XOcQ" target="_blank">
-            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Youtube" class="bi bi-youtube"></span>
-          </a>
-          <a href="https://www.instagram.com/jos.arango/" target="_blank">
-            <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"
-              class="bi bi-instagram"></span>
-          </a>
-
-
-        </div>
 
       </div>
 
 
-    </div>
+
+      <div class="contact">
+
+
+        <h4 class="title" id="con">CONTACT</h4>
+
+
+        <h3 id="touch" class="ptitle">
+          Lets keep in touch 🖐🏽
+        </h3>
+        <div class="info">
+
+
+
+          <div class="info_item" id="contact">
+            <div class="">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+
+            <span id="call"> Call me</span>
+            <br>
+
+            <a class="a_item">+1-502-5440-3980</a>
+
+
+          </div>
+
+          <div class="info_item">
+            <div class="">
+              <i class="bi bi-map-fill"></i>
+            </div>
+
+            <span id="location"> Location</span>
+            <br>
+            <a class="a_item">Izabal,Guatemala</a>
+
+          </div>
+
+
+
+          <div class="info_item">
+            <div class="">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+
+            <span id="mail"> Mail</span>
+            <br><a href="mailto:josarango24@gmail.com" class="a_item">josarango24@gmail.com</a>
+
+
+          </div>
+
+
+          <div class="media">
+            <a href="https://wa.me/54403980" target="_blank">
+              <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Whatsapp"
+                class="bi bi-whatsapp"></span>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCI4nEkfMPVLZHZ8_6m9XOcQ" target="_blank">
+              <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Youtube"
+                class="bi bi-youtube"></span>
+            </a>
+            <a href="https://www.instagram.com/jos.arango/" target="_blank">
+              <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"
+                class="bi bi-instagram"></span>
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
   </main>
 
 
-
-  <footer></footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -479,18 +715,11 @@
   <script src="javascript.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script>
 
-    var typed = new Typed(document.getElementById('multitext'), {
-      strings: ['Full stack', 'Data science', 'Industrial automation'],
-      loop: true,
-      typeSpeed: 70,
-    });
-
-
-  </script>
 
   <script src="javascript.js"></script>
+
+  <script src="language.js"></script>
 
 
 </body>

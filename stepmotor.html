@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/personal-computer-emoji-2048x1707-tzvu6v3l.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Josue Arango</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body id="body">
+
+    <div class="" id="overview"></div>
+    <nav>
+        <div class="menu" id="menu">
+            <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
+            <a href="index.html"><i class="bi bi-house"> </i>Home</a>
+            <hr>
+            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <hr>
+            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <hr>
+            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+        </div>
+        <label class="open" for="">
+            <a onclick="openMenu()"> <i class="bi bi-list"></i>
+            </a></label>
+        <div class="elements">
+            <a href="index.html">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#goals">Goals</a>
+            <a href="#specifications">Specifications</a>
+        </div>
+    </nav>
+    <!-- Project Details Section -->
+    <main>
+        <div class="container">
+            <section id="project-details">
+                <h1>Optimal Precision Motion Sequencing for NEMA 23 with PLC 27-200</h1>
+                <br>
+                <span>
+
+                    Below, I present an in-depth description of the setup and programming procedures to control a NEMA
+                    23 bipolar stepper motor and its driver using a PLC 27-200. This control system is configured and
+                    programmed using simulation software such as PC_SIMU, S7_200 Simulator, and STEP 7 MicroWIN,
+                    employing Ladder and Grafcet programming languages. The primary objective is to achieve specific
+                    motor movements, which include:
+
+                    - Completing a full revolution in just 333 milliseconds.
+                    - After a full revolution, pausing for 4 seconds (repeated three times).
+                    - Executing a revolution in 333 milliseconds, followed by a 333-millisecond pause, repeating this
+                    sequence three times, and then replicating these behaviors four times consecutively.
+
+                </span>
+                <p id="goals">
+
+                </p>
+
+
+                <h3 class="title">Goals</h4>
+                    <br>
+
+                    <h5 id="black">
+                        Automation:
+                    </h5>
+                    <span>
+                        Enable automation of tasks and processes by creating a reliable and programmable motion
+                        control system.
+                    </span>
+                    <br>
+                    <br>
+                    <h5 id="black">
+                        Versatility:
+                    </h5>
+                    <span>
+                        Develop a system that can be easily adapted for various applications, allowing users to
+                        customize motor movements as needed.
+                    </span>
+                    <br><br>
+                    <h5 id="black">
+                        Efficiency:
+                    </h5>
+                    <span>
+                        Optimize the use of the motor and controller to achieve efficient operations and
+                        minimize resource consumption.
+
+                    </span>
+                    <br><br>
+                    <div class="" id="specifications"></div>
+
+                    <h3 class="title">Configuration and Connection Layout:</h3>
+
+                    <span>
+                        I started by establishing the configuration and connection layout of a bipolar motor along
+                        with its stepper motor controller within electrical circuit simulation software, like Cade_Simu.
+                        From this layout, we deduce the precise order in which to activate the motor phases to
+                        accomplish a clockwise motion, typically designated as Q3, Q2, Q4, and Q1.
+                    </span>
+
+                    <h3 class="title">Programming Logic</h3>
+                    <span>
+                        The Ladder programming involves defining three physical input variables: START, STOP, and
+                        EMERGENCY
+                        STOP. The four outputs used for clockwise motor motion are activated sequentially, adhering to
+                        the
+                        previously mentioned order. As one output is activated, the previous one is deactivated.
+                        Furthermore, we employ memory storage variables, such as M, to regulate the timing of the
+                        program,
+                        guaranteeing that the motor completes a full revolution in 333 milliseconds and halts for 4
+                        seconds
+                        after each revolution.
+                    </span>
+
+                    <h3 class="title">Motor Movement Sequence:
+                    </h3>
+
+                    <span>
+                        In summary, the programming guarantees that the motor accomplishes a full revolution in just 333
+                        milliseconds and pauses for 4 seconds (repeated three times). It then executes a revolution in
+                        333 milliseconds, followed by a 333-millisecond pause, repeating these actions four times in
+                        succession. The Ladder programming, coupled with SET and RESET functions, along with the
+                        appropriate output connections, enables precise control of the NEMA 23 bipolar stepper motor
+                        using the PLC 27-200 and the aforementioned simulation tools."
+                    </span>
+
+                    <div>
+                        <h3 class="title">Simulation</h3>
+
+                        <video src="Videos/stepmotor.mkv" controls width="640" height="360" muted></video>
+                    </div>
+
+
+
+            </section>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="javascript.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/personal-computer-emoji-2048x1707-tzvu6v3l.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Josue Arango</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body id="body">
+
+
+    <div class="" id="overview"></div>
+    <nav>
+        <div class="menu" id="menu">
+            <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
+            <a href="index.html"><i class="bi bi-house"> </i>Home</a>
+            <hr>
+            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <hr>
+            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <hr>
+            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+        </div>
+        <label class="open" for="">
+            <a onclick="openMenu()"> <i class="bi bi-list"></i>
+            </a></label>
+        <div class="elements">
+            <a href="index.html">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#goals">Goals</a>
+            <a href="#specifications">Specifications</a>
+        </div>
+    </nav>
+    <!-- Project Details Section -->
+    <main>
+        <div class="container">
+            <section id="project-details">
+                <h1> 24 Hour Digital Clock </h1>
+                <br>
+                <span>
+                    A 24-hour digital clock is an electronic timekeeping device that displays the hours and minutes
+                    continuously in a non-stop format, using digital components such as counters, decoders, and
+                    seven-segment displays. This type of clock is particularly useful in scenarios where time needs to
+                    be tracked throughout the day and night. It finds applications in homes, offices, and various
+                    industries where precise timekeeping is crucial for coordinating activities and processes. Building
+                    a 24-hour digital clock is not only a practical endeavor but also an educational one, as it allows
+                    individuals to apply digital circuitry principles and gain a deeper understanding of electronics
+                    while creating a functional and reliable timekeeping device.
+                </span>
+                <p id="goals">
+
+                </p>
+
+
+                <h3 class="title">Goals</h4>
+                    <br>
+
+                    <h5 id="black">Precision Timekeeping: </h4>
+
+                        <span>
+                            The foremost goal is to create a digital clock that accurately keeps track of time, down to
+                            the seconds and minutes. It should provide reliable time information for various
+                            applications.
+                        </span>
+
+                        <br>
+                        <br>
+                        <h5 id="black">Synchronization: </h4>
+
+                            <span>
+                                The clock should ensure synchronization among its internal components and functions,
+                                enabling them to work together seamlessly. This synchronization is crucial in
+                                time-sensitive operations and systems.
+                            </span>
+
+
+
+                            <div class="" id="specifications"></div>
+
+                            <h3 class="title">Schematic</h3>
+
+                            <img src="images/multisim.png" width="100%" alt="">
+
+                            <h3 class="title">555 Clock</h3>
+
+                            <img src="https://www.allaboutcircuits.com/uploads/thumbnails/astable-555-timer-led-flasher-circuit.png?v=1452324995871"
+                                alt="">
+                            <br>
+                            <span>In my project, I employ a 555 timer in the astable mode, which generates a quadratic
+                                signal. This quadratic signal is a key component in activating the asynchronous
+                                flip-flop
+                                counters in the 74LS90. The frequency of the quadratic signal is a critical factor that
+                                directly depends on the values of the resistors and capacitors in the circuit. By
+                                carefully selecting and configuring these components, I can precisely control the output
+                                frequency, allowing for efficient and reliable operation of the synchronous counters.
+                                This setup plays a crucial role in various applications where accurate timing and
+                                counting are essential, such as in digital electronics and sequential control systems.
+                            </span>
+
+                            <br><br>
+                            <span>We use this formula for calculate the frequency of our quadratic signal</span>
+                            <br><br>
+                            <img src="images/55cal.png" width="70%" alt="">
+
+                            <br><br>
+
+
+                            <video src="Videos/555.mp4" controls width="50%" muted></video>
+
+                            <h3 class="title">74LS90 Digital Counter</h3>
+
+                            <span>
+                                We utilize a 74LS90 counter, composed of four JK flip-flops connected in series, making
+                                it an asynchronous counter. Given the presence of these four flip-flops, it allows for a
+                                4-bit count. We will employ this 4-bit output (ABCD bits) to interface with a 74LS47
+                                decoder.
+                            </span>
+
+                            <video src="Videos/jk.mkv" controls width="80%" muted></video>
+                            <br>
+                            <span>
+                                The decoder, in turn, takes these 4-bit inputs and decodes them into seven
+                                signals, which are then used to drive a 7-segment display. This counter also features a
+                                reset function, accessible via pins 2 and 3. When both of these pins receive a '1,' the
+                                counter resets to '0000,' effectively starting the counting process anew. We plan to
+                                employ this reset feature when we reach both the number 6 and the number 24 by using an
+                                AND gate.</span>
+
+                            <video src="Videos/countin.mp4" controls width="50%" muted></video>
+                            <br>
+
+                            <div id="project">
+
+                                <h3 class="title">Project</h3>
+
+                                <video src="Videos/clock.mp4" controls width=" 640" height="360" muted></video>
+
+
+                            </div>
+
+            </section>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="javascript.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>

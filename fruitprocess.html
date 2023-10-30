@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/personal-computer-emoji-2048x1707-tzvu6v3l.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Josue Arango</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body id="body">
+
+
+    <div class="" id="overview"></div>
+    <nav>
+        <div class="menu" id="menu">
+            <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
+            <a href="index.html"><i class="bi bi-house"> </i>Home</a>
+            <hr>
+            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <hr>
+            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <hr>
+            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+        </div>
+        <label class="open" for="">
+            <a onclick="openMenu()"> <i class="bi bi-list"></i>
+            </a></label>
+        <div class="elements">
+            <a href="index.html">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#goals">Goals</a>
+            <a href="#specifications">Specifications</a>
+        </div>
+    </nav>
+    <!-- Project Details Section -->
+    <main>
+        <div class="container">
+            <section id="project-details">
+                <h1> Fruit Ripening Automation </h1>
+                <br>
+                <span>
+                    The Automated Fruit Ripening Control System is a project aimed at revolutionizing the fruit ripening
+                    process by implementing an advanced closed-loop control system. The system utilizes the CAREL
+                    C.Suite software and a CAREL Programmable Logic Controller (CPO controller) to precisely control the
+                    ripening environment for fruits. This project combines programming in Structure Text and Functional
+                    Block Diagram languages to create a robust and adaptable control system.
+                </span>
+                <p id="goals">
+
+                </p>
+
+
+                <h3 class="title">Goals</h4>
+                    <br>
+
+                    <h5 id="black">Automated Ripening: </h4>
+
+                        <span>
+                            Implement an automated fruit ripening process to ensure consistent and controlled ripening
+                            conditions.
+                        </span>
+
+                        <br>
+                        <br>
+                        <h5 id="black">Optimized Environment: </h4>
+
+                            <span>
+                                Create an optimized ripening environment by controlling variables such as oxygen, carbon
+                                dioxide, humidity, temperature.
+                            </span>
+
+                            <br>
+                            <br>
+
+                            <h5 id="black">Closed-Loop Control </h4>
+
+                                <span>
+                                    Develop a closed-loop control system that continuously monitors and adjusts
+                                    environmental parameters to maintain the desired ripening conditions.
+                                </span>
+
+                                <br>
+                                <br>
+
+
+                                <h5 id="black">Energy Efficiency </h4>
+
+                                    <span>
+                                        Maximize energy efficiency by activating heaters or coolers as needed to reduce
+                                        wastage and operational costs.
+                                    </span>
+
+                                    <br>
+                                    <br>
+
+
+                                    <h5 id="black">Data Logging: </h4>
+
+                                        <span>
+                                            Implement a data logging system to record environmental conditions, allowing
+                                            for analysis and quality control.
+                                        </span>
+
+                                        <br>
+                                        <br>
+
+
+
+                                        <div class="" id="specifications"></div>
+
+
+
+                                        <h3 class="title">Variables</h3>
+
+
+                                        <br>
+                                        <span>
+                                            In this process, I have established critical variables – Room Temperature,
+                                            Fruit Temperature, Carbon Dioxide, Humidity, and Ethylene – which are
+                                            pivotal for the monitoring and control of the fruit ripening process. To
+                                            ensure the accuracy of the sensor data, a crucial calibration step is
+                                            executed using a summation gate. This gate effectively combines two real
+                                            numbers, which are the sensor readings and an offset, with these variables
+                                            being represented as 32-bit real-point numbers. The calibration process
+                                            involves adding the offset to the raw sensor values using summation blocks.
+                                            The program's structure incorporates multiple summation blocks for each
+                                            variable, resulting in the generation of precise and finely-tuned values for
+                                            temperature, carbon dioxide, humidity, and ethylene. This initial program
+                                            setup serves as the cornerstone for the advanced control and monitoring of
+                                            the fruit ripening process, where these calibrated variables are integrated
+                                            into the control logic for seamless operation and optimization.
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <img src="images/variables.png" width="70%">
+                                        <br>
+                                        <br>
+                                        <img src="images/temp.png" width="70%">
+
+                                        <h3 class="title">Hysteresis</h3>
+
+                                        <span>
+                                            Following the successful conversion of physical variables for the
+                                            controller, the next step involves implementing the hysteresis process. This
+                                            process defines a setpoint and compares it to the current value to determine
+                                            the on/off state of a digital output. The comparison results in a '1' when a
+                                            specific temperature threshold is reached, indicating output activation.
+                                            When the temperature falls below a defined left differential threshold, the
+                                            output is turned off. This enables the activation of devices like heaters.
+                                            The process can be reversed by inverting the values or using a NOT gate. To
+                                            manage the system, an "Enable" variable is introduced, which, when combined
+                                            with the hysteresis output through an AND gate, exclusively activates the
+                                            chiller when the system's temperature exceeds the setpoint and the system is
+                                            enabled. This meticulous control ensures efficient temperature
+                                            regulation.</span>
+                                        <br>
+                                        <br>
+
+                                        <img src="images/hystl.png" width="70%">
+                                        <br>
+                                        <br>
+
+                                        <span>Reverse</span>
+                                        <br>
+                                        <br>
+
+                                        <img src="images/hystr.png" width="70%">
+                                        <br>
+                                        <br>
+
+                                        <h3 class="title">Code example in StructureText</h3>
+
+                                        <div class="containercode">
+                                            <div class="code-wrape">
+                                                <pre>
+
+                                    <code id="code" class="language-java">
+
+                                    
+
+                                        IF(In>=SetP+DiffRight) 
+
+                                        THEN Out:=TRUE XOR Reverse;
+                                        ELSIF(In<=SetP-DiffLeft) 
+                                        THEN Out:=FALSE XOR Reverse;
+
+                                        END_IF;
+                                        
+                                                                            </code>
+                                 </pre>
+                                            </div>
+                                        </div>
+
+
+                                        <h3 class="title">Activation trought hysteresis process</h3>
+
+                                        <span>
+
+                                            I create an "Enable" variable to activate the entire system. If the
+                                            temperature comparison with the setpoint, using the hysteresis process,
+                                            exceeds the setpoint, it triggers the activation of a chiller to initiate
+                                            cooling. This is achieved through an AND gate that takes both the "Enable"
+                                            variable and the hysteresis output as inputs. In summary, the chiller is
+                                            activated only when the system's temperature surpasses the setpoint, and the
+                                            entire system is enabled. This process of hysteresis blocks is applied to
+                                            each variable, allowing for the activation of a heater, chiller, CO2 inlet
+                                            valve, ethylene inlet valve, and humidity valve as needed for precise
+                                            environmental control.
+                                        </span>
+                                        <br>
+                                        <br>
+
+
+
+                                        <img src="images/hyter.png" width="70%">
+
+                                        <br><br>
+
+                                        <h3 class="title">Start system</h3>
+
+                                        <span>
+                                            I've developed a program that utilizes a SET-RESET block, functioning
+                                            analogously to an electronic SR latch, as a memory storage mechanism. When a
+                                            logical '1' is applied to the SET input, it results in a logical '1' at the
+                                            output, effectively initiating the system. Conversely, supplying a '1' to
+                                            the Reset input deactivates the system by producing a '0' at the output,
+                                            consequently altering the input values.
+
+                                            In practical terms, this is accomplished through the use of two physical
+                                            button inputs with defined boolean variables. Pressing the "Start" button
+                                            sends a '1' to the logical SET input of the controller, causing a logical
+                                            '1' in the global variable "Enable." This, in turn, activates the hysteresis
+                                            comparator logic to initiate the process. Conversely, pressing the "Stop"
+                                            button sends a '1' to the RESET input, resulting in a logical '0' at the
+                                            output of the "Enable" variable, thereby deactivating the entire system by
+                                            setting all the AND gates to '0'.
+                                        </span>
+
+                                        <video src="Videos/SR.mkv" width="70%" controls muted>
+                                        </video>
+
+                                        <video src="Videos/STARTSTOP.mkv" width="70%" controls muted></video>
+                                        <!-- 
+                                        <div id="project">
+
+                                            <h3 class="title">Project</h3>
+
+                                            <video src="Videos/clock.mp4" controls width=" 640" height="360"
+                                                muted></video>
+
+
+                                        </div> -->
+
+            </section>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="javascript.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>
