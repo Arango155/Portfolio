@@ -20,33 +20,66 @@
 
     <div class="" id="overview"></div>
     <nav>
+
         <div class="menu" id="menu">
             <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
             <a href="index.html"><i class="bi bi-house"> </i>Home</a>
             <hr>
-            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <a href="#overview"><i class="bi bi-file-earmark-text translatable"> </i>Overview</a>
             <hr>
-            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <a href="#goals"><i class="bi bi-graph-up-arrow translatable"> </i>Goals</a>
             <hr>
-            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+            <a href="#specifications"><i class="bi bi-pencil translatable"> </i>Specifications</a>
+
         </div>
         <label class="open" for="">
             <a onclick="openMenu()"> <i class="bi bi-list"></i>
             </a></label>
+
+
+
+
         <div class="elements">
             <a href="index.html">Home</a>
-            <a href="#overview">Overview</a>
-            <a href="#goals">Goals</a>
-            <a href="#specifications">Specifications</a>
+            <a href="#overview" class="translatable">Overview</a>
+            <a href="#goals" class="translatable">Goals</a>
+            <a href="#specifications" class="translatable">Specifications</a>
+
+            <div class="hover-div">
+
+                <i class="bi bi-translate"></i>
+
+
+                <div id="submenu" class="hidden-div">
+
+                    <img id="translateENButton"
+                        src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png"
+                        alt="" class="flag">
+                    <img id="translateESButton" src="https://cdn.countryflags.com/thumbs/guatemala/flag-800.png" alt=""
+                        class="flag">
+
+                    <img id="translateFRButton"
+                        src="https://www.countryflags.com/wp-content/uploads/france-flag-png-xl.png" alt=""
+                        class="flag">
+
+
+
+
+
+
+                </div>
+            </div>
         </div>
+
+
     </nav>
     <!-- Project Details Section -->
     <main>
         <div class="container">
             <section id="project-details">
-                <h1> 24 Hour Digital Clock </h1>
+                <h1 class="translatable"> 24 Hour Digital Clock </h1>
                 <br>
-                <span>
+                <span class="translatable">
                     A 24-hour digital clock is an electronic timekeeping device that displays the hours and minutes
                     continuously in a non-stop format, using digital components such as counters, decoders, and
                     seven-segment displays. This type of clock is particularly useful in scenarios where time needs to
@@ -61,12 +94,12 @@
                 </p>
 
 
-                <h3 class="title">Goals</h4>
+                <h3 class="title translatable">Goals</h4>
                     <br>
 
-                    <h5 id="black">Precision Timekeeping: </h4>
+                    <h5 id="black" class="translatable">Precision Timekeeping: </h4>
 
-                        <span>
+                        <span class="translatable">
                             The foremost goal is to create a digital clock that accurately keeps track of time, down to
                             the seconds and minutes. It should provide reliable time information for various
                             applications.
@@ -74,9 +107,9 @@
 
                         <br>
                         <br>
-                        <h5 id="black">Synchronization: </h4>
+                        <h5 id="black" class="translatable">Synchronization: </h4>
 
-                            <span>
+                            <span class="translatable">
                                 The clock should ensure synchronization among its internal components and functions,
                                 enabling them to work together seamlessly. This synchronization is crucial in
                                 time-sensitive operations and systems.
@@ -86,7 +119,7 @@
 
                             <div class="" id="specifications"></div>
 
-                            <h3 class="title">Schematic</h3>
+                            <h3 class="title translatable">Schematic</h3>
 
                             <img src="images/multisim.png" width="100%" alt="">
 
@@ -95,7 +128,8 @@
                             <img src="https://www.allaboutcircuits.com/uploads/thumbnails/astable-555-timer-led-flasher-circuit.png?v=1452324995871"
                                 alt="">
                             <br>
-                            <span>In my project, I employ a 555 timer in the astable mode, which generates a quadratic
+                            <span class="translatable">In my project, I employ a 555 timer in the astable mode, which
+                                generates a quadratic
                                 signal. This quadratic signal is a key component in activating the asynchronous
                                 flip-flop
                                 counters in the 74LS90. The frequency of the quadratic signal is a critical factor that
@@ -107,7 +141,8 @@
                             </span>
 
                             <br><br>
-                            <span>We use this formula for calculate the frequency of our quadratic signal</span>
+                            <span class="translatable">We use this formula for calculate the frequency of our quadratic
+                                signal</span>
                             <br><br>
                             <img src="images/55cal.png" width="70%" alt="">
 
@@ -116,31 +151,85 @@
 
                             <video src="Videos/555.mp4" controls width="50%" muted></video>
 
-                            <h3 class="title">74LS90 Digital Counter</h3>
+                            <h3 class="title translatable">74LS90 Digital Counter</h3>
 
-                            <span>
-                                We utilize a 74LS90 counter, composed of four JK flip-flops connected in series, making
-                                it an asynchronous counter. Given the presence of these four flip-flops, it allows for a
-                                4-bit count. We will employ this 4-bit output (ABCD bits) to interface with a 74LS47
-                                decoder.
+                            <span class="translatable">
+                                We use a 74LS90 counter that integrates four JK flip-flops connected in series to
+                                activate the JK input and in parallel in the clock pulse, these JK flip flops of the
+                                74ls90 counter are activated low giving us an ascending count, forming an asynchronous
+                                counter due to the series connection of the JK. Each of the flip flops within the
+                                integrated symbol symbolizes a bit of information, so having 4 bits in this flip-flop
+                                configuration is capable of counting up to 4 bits. I must remember that due to the use
+                                of JK flip flops, it is called a counter, when using type D flip flops they would be
+                                registers, in this case we will use the 4-bit output (denoted as ABCD bits) to establish
+                                an interaction with a 74LS47
                             </span>
+                            <br>
+
+
 
                             <video src="Videos/jk.mkv" controls width="80%" muted></video>
                             <br>
-                            <span>
-                                The decoder, in turn, takes these 4-bit inputs and decodes them into seven
-                                signals, which are then used to drive a 7-segment display. This counter also features a
-                                reset function, accessible via pins 2 and 3. When both of these pins receive a '1,' the
-                                counter resets to '0000,' effectively starting the counting process anew. We plan to
-                                employ this reset feature when we reach both the number 6 and the number 24 by using an
-                                AND gate.</span>
 
+                            <span class="translatable">
+                                The decoder 74ls47 operates with 4-bit inputs, transforming them into seven different
+                                signals.
+                                This operation is essential, since the 7-segment display requires seven input variables
+                                according to its truth table to activate the corresponding LEDs. These resulting signals
+                                are used for precise control of the 7-segment display.
+
+                                The counter implements a reset function, which is activated through pins 2 and 3. When
+                                both pins receive a logic '1' signal, the counter resets to its initial state '0000',
+                                starting the counting process. right from the start. It is planned to strategically use
+                                this reset function when reaching both the number 6 and the number 24, using an AND
+                                logic gate to manage this condition. This approach allows for efficient and accurate
+                                count management, ensuring proper synchronization with system needs.</span>
+                            <br>
+                            <img src="https://res.utmel.com/Images/UEditor/e99464ae-a58c-4728-ac2c-d875fbdd58ac.png"
+                                alt="" width="70%">
+                            <br>
+                            <br>
+                            <span class="translatable">
+                                The operation of the 7-segment display is governed by a specific truth table, where the
+                                ABCD inputs are interpreted by the 74LS47 decoder to generate seven different outputs.
+                                These outputs, arranged according to a predefined order, numerically represent the
+                                digits on the display. For example, when the inputs are '0000', 4 LEDs arranged in a
+                                circle are activated, indicating the number "0" in binary format.
+
+                                This process of binary interpretation and decoding is finally translated into the visual
+                                presentation of decimal numbers on the 7-segment display. In this way, the count
+                                generated by the counter can be observed, first in binary format, then decoded by the
+                                decoder and, finally, displayed on the 7-segment display. This comprehensive system
+                                provides a clear and understandable representation of the count in progress.
+                            </span>
+                            <br>
+                            <br>
+                            <img src="https://i0.wp.com/studyexperts.in/blog/wp-content/uploads/2021/10/Pasted-1.png?resize=539%2C475&ssl=1"
+                                alt="" width="70%">
+                            <br>
                             <video src="Videos/countin.mp4" controls width="50%" muted></video>
                             <br>
 
+                            <h3 class="title translatable">Conclusion</h3>
+
+                            <span class="translatable">
+                                Ultimately, the comprehensive configuration breaks down as follows: six displays in
+                                total, distributed in two sets for the seconds, two for the minutes and two for the
+                                hours. Each counter is started by low pulses generated by a quadratic signal, or clock
+                                pulse. In the case of the seconds counter, this signal comes from timer 555.
+
+                                The first counter emits its signal to the second in a configuration that sets it to 0
+                                when it reaches the counting limit (9 in this case). This results in a seconds counter,
+                                which, in turn, is set to reset when it reaches the value 60, thus starting the minute
+                                count. This process is repeated successively until the hours are reached, and a reset
+                                mechanism is implemented when the end of the day is reached, that is, after 23:59:59. In
+                                summary, the coordination between counter, decoder and display is precisely synchronized
+                                to offer a continuous and structured representation of time in the format of hours,
+                                minutes and seconds.</span>
+
                             <div id="project">
 
-                                <h3 class="title">Project</h3>
+                                <h3 class="title translatable">Project</h3>
 
                                 <video src="Videos/clock.mp4" controls width=" 640" height="360" muted></video>
 
@@ -160,6 +249,7 @@
 
     <script src="javascript.js"></script>
     <script src="prism.js"></script>
+    <script src="language.js"></script>
 </body>
 
 </html>

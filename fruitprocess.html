@@ -20,33 +20,66 @@
 
     <div class="" id="overview"></div>
     <nav>
+
         <div class="menu" id="menu">
             <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
             <a href="index.html"><i class="bi bi-house"> </i>Home</a>
             <hr>
-            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <a href="#overview"><i class="bi bi-file-earmark-text translatable"> </i>Overview</a>
             <hr>
-            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <a href="#goals"><i class="bi bi-graph-up-arrow translatable"> </i>Goals</a>
             <hr>
-            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+            <a href="#specifications"><i class="bi bi-pencil translatable"> </i>Specifications</a>
+
         </div>
         <label class="open" for="">
             <a onclick="openMenu()"> <i class="bi bi-list"></i>
             </a></label>
+
+
+
+
         <div class="elements">
             <a href="index.html">Home</a>
-            <a href="#overview">Overview</a>
-            <a href="#goals">Goals</a>
-            <a href="#specifications">Specifications</a>
+            <a href="#overview" class="translatable">Overview</a>
+            <a href="#goals" class="translatable">Goals</a>
+            <a href="#specifications" class="translatable">Specifications</a>
+
+            <div class="hover-div">
+
+                <i class="bi bi-translate"></i>
+
+
+                <div id="submenu" class="hidden-div">
+
+                    <img id="translateENButton"
+                        src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png"
+                        alt="" class="flag">
+                    <img id="translateESButton" src="https://cdn.countryflags.com/thumbs/guatemala/flag-800.png" alt=""
+                        class="flag">
+
+                    <img id="translateFRButton"
+                        src="https://www.countryflags.com/wp-content/uploads/france-flag-png-xl.png" alt=""
+                        class="flag">
+
+
+
+
+
+
+                </div>
+            </div>
         </div>
+
+
     </nav>
     <!-- Project Details Section -->
     <main>
         <div class="container">
             <section id="project-details">
-                <h1> Fruit Ripening Automation </h1>
+                <h1 class="translatable"> Fruit Ripening Automation </h1>
                 <br>
-                <span>
+                <span class="translatable">
                     The Automated Fruit Ripening Control System is a project aimed at revolutionizing the fruit ripening
                     process by implementing an advanced closed-loop control system. The system utilizes the CAREL
                     C.Suite software and a CAREL Programmable Logic Controller (CPO controller) to precisely control the
@@ -58,21 +91,21 @@
                 </p>
 
 
-                <h3 class="title">Goals</h4>
+                <h3 class="title translatable">Goals</h4>
                     <br>
 
-                    <h5 id="black">Automated Ripening: </h4>
+                    <h5 id="black" class="translatable">Automated Ripening: </h4>
 
-                        <span>
+                        <span class="translatable">
                             Implement an automated fruit ripening process to ensure consistent and controlled ripening
                             conditions.
                         </span>
 
                         <br>
                         <br>
-                        <h5 id="black">Optimized Environment: </h4>
+                        <h5 id="black" class="translatable">Optimized Environment: </h4>
 
-                            <span>
+                            <span class="translatable">
                                 Create an optimized ripening environment by controlling variables such as oxygen, carbon
                                 dioxide, humidity, temperature.
                             </span>
@@ -80,9 +113,9 @@
                             <br>
                             <br>
 
-                            <h5 id="black">Closed-Loop Control </h4>
+                            <h5 id="black" class="translatable">Closed-Loop Control </h4>
 
-                                <span>
+                                <span class="translatable">
                                     Develop a closed-loop control system that continuously monitors and adjusts
                                     environmental parameters to maintain the desired ripening conditions.
                                 </span>
@@ -91,9 +124,9 @@
                                 <br>
 
 
-                                <h5 id="black">Energy Efficiency </h4>
+                                <h5 id="black" class="translatable">Energy Efficiency </h4>
 
-                                    <span>
+                                    <span class="translatable">
                                         Maximize energy efficiency by activating heaters or coolers as needed to reduce
                                         wastage and operational costs.
                                     </span>
@@ -102,9 +135,9 @@
                                     <br>
 
 
-                                    <h5 id="black">Data Logging: </h4>
+                                    <h5 id="black" class="translatable">Data Logging: </h4>
 
-                                        <span>
+                                        <span class="translatable">
                                             Implement a data logging system to record environmental conditions, allowing
                                             for analysis and quality control.
                                         </span>
@@ -118,11 +151,11 @@
 
 
 
-                                        <h3 class="title">Variables</h3>
+                                        <h3 class="title translatable">Variables</h3>
 
 
                                         <br>
-                                        <span>
+                                        <span class="translatable">
                                             In this process, I have established critical variables – Room Temperature,
                                             Fruit Temperature, Carbon Dioxide, Humidity, and Ethylene – which are
                                             pivotal for the monitoring and control of the fruit ripening process. To
@@ -145,9 +178,9 @@
                                         <br>
                                         <img src="images/temp.png" width="70%">
 
-                                        <h3 class="title">Hysteresis</h3>
+                                        <h3 class="title translatable">Hysteresis</h3>
 
-                                        <span>
+                                        <span class="translatable">
                                             Following the successful conversion of physical variables for the
                                             controller, the next step involves implementing the hysteresis process. This
                                             process defines a setpoint and compares it to the current value to determine
@@ -168,7 +201,7 @@
                                         <br>
                                         <br>
 
-                                        <span>Reverse</span>
+                                        <span class="translatable">Reverse</span>
                                         <br>
                                         <br>
 
@@ -176,7 +209,7 @@
                                         <br>
                                         <br>
 
-                                        <h3 class="title">Code example in StructureText</h3>
+                                        <h3 class="title translatable">Code example in StructureText</h3>
 
                                         <div class="containercode">
                                             <div class="code-wrape">
@@ -200,9 +233,9 @@
                                         </div>
 
 
-                                        <h3 class="title">Activation trought hysteresis process</h3>
+                                        <h3 class="title translatable">Activation trought hysteresis process</h3>
 
-                                        <span>
+                                        <span class="translatable">
 
                                             I create an "Enable" variable to activate the entire system. If the
                                             temperature comparison with the setpoint, using the hysteresis process,
@@ -224,9 +257,9 @@
 
                                         <br><br>
 
-                                        <h3 class="title">Start system</h3>
+                                        <h3 class="title translatable">Start system</h3>
 
-                                        <span>
+                                        <span class="translatable">
                                             I've developed a program that utilizes a SET-RESET block, functioning
                                             analogously to an electronic SR latch, as a memory storage mechanism. When a
                                             logical '1' is applied to the SET input, it results in a logical '1' at the
@@ -272,6 +305,7 @@
 
     <script src="javascript.js"></script>
     <script src="prism.js"></script>
+    <script src="language.js"></script>
 </body>
 
 </html>

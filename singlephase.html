@@ -20,33 +20,66 @@
 
     <div class="" id="overview"></div>
     <nav>
+
         <div class="menu" id="menu">
             <a class="close" onclick="closeMenu()" href="javascript:void(0)"><i class="bi bi-x"></i></a>
             <a href="index.html"><i class="bi bi-house"> </i>Home</a>
             <hr>
-            <a href="#overview"><i class="bi bi-file-earmark-text"> </i>Overview</a>
+            <a href="#overview"><i class="bi bi-file-earmark-text translatable"> </i>Overview</a>
             <hr>
-            <a href="#goals"><i class="bi bi-graph-up-arrow"> </i>Goals</a>
+            <a href="#goals"><i class="bi bi-graph-up-arrow translatable"> </i>Goals</a>
             <hr>
-            <a href="#specifications"><i class="bi bi-pencil"> </i>Specifications</a>
+            <a href="#specifications"><i class="bi bi-pencil translatable"> </i>Specifications</a>
+
         </div>
         <label class="open" for="">
             <a onclick="openMenu()"> <i class="bi bi-list"></i>
             </a></label>
+
+
+
+
         <div class="elements">
             <a href="index.html">Home</a>
-            <a href="#overview">Overview</a>
-            <a href="#goals">Goals</a>
-            <a href="#specifications">Specifications</a>
+            <a href="#overview" class="translatable">Overview</a>
+            <a href="#goals" class="translatable">Goals</a>
+            <a href="#specifications" class="translatable">Specifications</a>
+
+            <div class="hover-div">
+
+                <i class="bi bi-translate"></i>
+
+
+                <div id="submenu" class="hidden-div">
+
+                    <img id="translateENButton"
+                        src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png"
+                        alt="" class="flag">
+                    <img id="translateESButton" src="https://cdn.countryflags.com/thumbs/guatemala/flag-800.png" alt=""
+                        class="flag">
+
+                    <img id="translateFRButton"
+                        src="https://www.countryflags.com/wp-content/uploads/france-flag-png-xl.png" alt=""
+                        class="flag">
+
+
+
+
+
+
+                </div>
+            </div>
         </div>
+
+
     </nav>
     <!-- Project Details Section -->
     <main>
         <div class="container">
             <section id="project-details">
-                <h1>Reversing Single Phase Motor</h1>
+                <h1 class="translatable">Reversing Single Phase Motor</h1>
                 <br>
-                <span>
+                <span class="translatable">
                     Throughout my career, I've observed that the conventional method of reversing a single-phase motor
                     involves the manual reconfiguration of wiring connections. Recognizing the need for greater
                     efficiency
@@ -68,12 +101,12 @@
                 </p>
 
 
-                <h3 class="title">Goals</h4>
+                <h3 class="title translatable">Goals</h4>
                     <br>
 
-                    <h5 id="black">Simplify motor reversal:</h4>
+                    <h5 id="black" class="translatable">Simplify motor reversal:</h4>
 
-                        <span>
+                        <span class="translatable">
                             The primary goal is to simplify the process of reversing a single-phase
                             motor.
 
@@ -85,9 +118,9 @@
 
                         <br>
                         <br>
-                        <h5 id="black">Automation:</h4>
+                        <h5 id="black" class="translatable">Automation:</h4>
 
-                            <span>
+                            <span class="translatable">
                                 The project seeks to automate the process of reversing single-phase motors. Automation
                                 reduces the risk of human error and ensures consistent and reliable motor direction
                                 changes,
@@ -99,15 +132,15 @@
 
                             <div class="" id="specifications"></div>
 
-                            <h3 class="title">Schematic</h3>
+                            <h3 class="title translatable">Schematic</h3>
 
                             <img src="images/schematic.jpg" width="30%" alt="">
 
-                            <h3 class="title">PLC Ladder</h3>
+                            <h3 class="title translatable">PLC Ladder</h3>
 
                             <img src="images/plc.jpg" alt="">
 
-                            <h3 class="title">Code example in java</h3>
+                            <h3 class="title translatable">Code example in java</h3>
 
                             <div class="containercode">
                                 <div class="code-wrape">
@@ -206,7 +239,7 @@
                                 </div>
                             </div>
 
-                            <h3 class="title">Wire</h3>
+                            <h3 class="title translatable">Wire</h3>
 
                             <img src="images/contactor.jpg" width="30%" alt="">
                             <br>
@@ -218,10 +251,16 @@
                                 <video src="Videos/demomotor.mp4" controls width="640" height="360"></video>
                             </div>
 
+                            <div>
+                                <h3 class="title">Wiring PLC</h3>
+
+                                <video src="Videos/pruebam.mkv" controls width="640" height="360"></video>
+                            </div>
+
 
                             <div id="project">
 
-                                <h3 class="title">Project</h3>
+                                <h3 class="title translatable">Project</h3>
 
                                 <video src="Videos/motor1.mp4" controls width="640" height="360"></video>
 
@@ -241,6 +280,7 @@
 
     <script src="javascript.js"></script>
     <script src="prism.js"></script>
+    <script src="language.js"></script>
 </body>
 
 </html>

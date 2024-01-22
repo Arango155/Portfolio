@@ -8,33 +8,33 @@ var industrial = document.getElementById('industrial');
 
 var display_Skills = 1;
 
-var display_Dark = 1; // Declare the variable at the beginning
-
 function darkMode() {
+
   var body = document.getElementById('body');
   var icon = document.getElementById('icon');
-  var icon2 = document.getElementById('icon2'); // Make sure you have an element with ID "icon2"
+  var icon2 = document.getElementById('icon2');
+  var display_Dark = localStorage.getItem('darkMode'); // Get the dark mode preference from localStorage
 
-  if (display_Dark == 1) {
+  if (display_Dark === '1' || display_Dark === null) { // Default to dark mode if not previously set
     body.classList.add('dark');
     icon.classList.remove('bi-moon');
     icon.classList.add('bi-sun');
     icon2.classList.remove('bi-moon');
     icon2.classList.add('bi-sun');
 
-    display_Dark = 0;
-  } else if (display_Dark == 0) {
+    display_Dark = '0';
+  } else if (display_Dark === '0') {
     body.classList.remove('dark');
     icon2.classList.remove('bi-sun');
     icon2.classList.add('bi-moon');
     icon.classList.add('bi-moon');
     icon.classList.remove('bi-sun');
 
-    display_Dark = 1;
+    display_Dark = '1';
   }
+
+  localStorage.setItem('darkMode', display_Dark); // Save the dark mode preference to localStorage
 }
-
-
 
 function showWeb() {
 
@@ -120,10 +120,6 @@ function showSoftSkills() {
 
 
 
-
-
-
-
 function openMenu() {
   document.getElementById('menu').style.width = '200px';
 }
@@ -137,3 +133,30 @@ fetch('navigation.html')
   .then(content => {
     document.getElementById('nav').innerHTML = content;
   });
+
+
+
+function changeLanguage(language_Selected) {
+
+  var cv = document.getElementById('download');
+
+  if (language_Selected == 0) {
+
+    cv.setAttribute("href", "https://docs.google.com/document/d/1rHOw_tCeFwFhKaxs6pXUMRYEy-PwbRr8MtTsqARGZbk/edit?usp=sharing");
+
+  } else if (language_Selected == 1) {
+
+    cv.setAttribute("href", "https://docs.google.com/document/d/1MkosOCFYTIPml8M01Y78fusQQopbeFYWa4inrdvDxao/edit?usp=sharing");
+
+  } else if (language_Selected == 2) {
+
+    cv.setAttribute("href", "https://docs.google.com/document/d/1lRaxle0xHYn4GJ8NopmyxUsarE2vjc_hgjqXlGFiSKQ/edit?usp=sharing")
+
+  }
+
+
+
+}
+
+
+

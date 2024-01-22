@@ -8,6 +8,10 @@
 
 }
 
+.white {
+  color: white;
+}
+
 .int .name {
   margin-left: 20px;
 }
@@ -526,8 +530,7 @@ main {
   align-items: center;
 }
 
-
-.card {
+/* .card {
   border-radius: 5%;
   text-align: left;
   align-items: left;
@@ -538,8 +541,32 @@ main {
   color: black;
   padding: 0 10px;
   background-color: var(--fourth-color);
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+} */
+
+
+.card {
+  border-radius: 5%;
+  text-align: left;
+  align-items: left;
+  max-width: 30%;
+  /* Ancho máximo del cuadro */
+  width: 100%;
+  /* Hacer que ocupe el ancho máximo disponible */
+  font-size: 20px;
+  margin: 10px;
+  color: black;
+  padding: 0 10px;
+  background-color: var(--fourth-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* Evitar que el contenido se desborde */
+  word-wrap: break-word;
+  /* Romper palabras largas */
 }
+
 
 
 .elements a {
@@ -573,7 +600,6 @@ main {
 }
 
 .items {
-  margin-top: 1%;
 
   text-align: center;
   align-items: center;
@@ -845,6 +871,8 @@ a:hover {
   .open {
     padding-right: 3%;
   }
+
+
 
   .card {
     max-width: unset;
